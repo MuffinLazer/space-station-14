@@ -547,7 +547,7 @@
   name: disabler
   parent: [WeaponDisablerPractice, BaseSecurityCommandContraband]
   id: WeaponDisabler
-  description: A self-defense weapon that exhausts organic targets, weakening them until they collapse.
+  description: A self-defense weapon that exhausts organic targets, slowing them down, comes with an additional mode to increase ally's movement speeds
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/disabler.rsi
@@ -566,6 +566,14 @@
   - type: BatteryAmmoProvider
     proto: BulletDisabler
     fireCost: 40
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletDisabler
+      fireCost: 40
+      pacifismAllowedMode: true
+    - proto: BulletEnabler
+      fireCost: 40
+      pacifismAllowedMode: true
   - type: GuideHelp
     guides:
     - Security
@@ -604,6 +612,14 @@
   - type: BatteryAmmoProvider
     proto: BulletDisablerSmgSlowing
     fireCost: 25
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletDisablerSmgSlowing
+      fireCost: 25
+      pacifismAllowedMode: true
+    - proto: BulletEnablerSmgSpeeding
+      fireCost: 25
+      pacifismAllowedMode: true
   - type: MagazineVisuals
     magState: mag
     steps: 5
