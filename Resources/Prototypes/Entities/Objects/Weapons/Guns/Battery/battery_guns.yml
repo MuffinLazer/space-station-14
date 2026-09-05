@@ -584,7 +584,7 @@
   name: disabler SMG
   parent: [BaseWeaponBattery, BaseSecurityContraband]
   id: WeaponDisablerSMG
-  description: Advanced weapon that exhausts organic targets, weakening them until they collapse.
+  description: An Advanced weapon that exhausts organic targets, slowing them down, comes with an additional mode to increase ally's movement speeds
   components:
   - type: Item
     size: Large
